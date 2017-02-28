@@ -1,0 +1,50 @@
+@mixin header($size) {
+    font-size: $size;
+    font-family: $secondary-font;
+    color: $text-color;
+    margin: 0;
+    font-weight: 700;
+}
+
+h1 {
+    @include header(4rem);
+    margin: 0.75rem 0 1.75rem 0;
+    text-align: center;
+    //padding: 0 1.5rem 0 1.5rem;
+}
+
+h2 {
+    @include header(1.5rem);
+    text-align: center;
+    margin-top: 1.5rem 0;
+    line-height: 2.75rem;
+    //padding: 1rem 0rem 0.5rem 0rem;
+}
+
+h3 {
+    @include header(1.25rem);
+    text-align: center;
+    padding: 1rem 0rem 0.4rem 0rem;
+}
+
+h4 {
+    @include header(1.1rem);
+    text-align: center;
+    padding: 1.2rem 0rem 0.5rem 0rem;
+}
+
+h5 {
+    @include header(1.05rem);
+    text-align: center;
+}
+
+h6 {
+    @include header(1rem);
+    text-align: center;
+}
+
+p {
+    @extent %primary-font-regular;
+    font-size: 1rem;
+    margin: 0.65rem 0;
+}

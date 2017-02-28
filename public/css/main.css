@@ -1,164 +1,252 @@
-/*--------------------*       Variables
-\*--------------------*/
-/*--------------------*       Typography
-\*--------------------*/
+/**
+ * Flex Grid -
+ * Version: 0.3.2
+ *
+ * Simple grid built with flex box and sass.
+ *
+ * Matthew Simo - matthew.a.simo@gmail.com
+ */
+/**
+ * Grid setup
+ *
+ * The grid will calculate dimensions based on these two variables:
+ * $fg-columns will inform the grid loops how many columns there should be.
+ * $fg-gutter will inform the grid loops how big eac column's gutters should be.
+ * $fg-edge will inform how much spacing should be on the edge of each row.
+ *
+ * The grid will name columns, rows, offsets based on these three variables:
+ * $fg-class-row string used for the row class
+ * $fg-class-col string used for the column class
+ * $fg-class-off string used for the offset class
+ */
+/**
+ * Break point namespace object
+ *
+ * Set the default namespace object with these defaults with the
+ * understanding that you can pass in whatever you might require for your site.
+ *
+ * $fg-breakpoints is a Sass list with nested lists inside. Each sub list defines two things.
+ * 1. The namespace for that breakpoint. (Required) (i.e. xs, sm, md, lg)
+ * 2. The min-width measurement for the breakpoint for that namespace. (i.e. 48em, 62em, 75em)
+ *
+ * Note: These should be in the proper order (at least till libsass handles map keys properly).
+ *
+ * Note: If the measurement is left out then it will be skipped when generating
+ * the grid and applied to global styles.
+ *
+ */
+/**
+ * Class Name Defaults
+ *
+ * Define class names for columns, rows and offsets in case compatibility with other
+ * libraries is necessary.
+
+
+/**
+ * Calculate column size percentage
+ */
+/**
+ * Spacing mixin to create uniform margin/padding
+ */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto");
+.masthead_logo, .card {
+  display: flex;
+  display: -webkit-flex; }
+
+/**
+ * Row wrapper class, flex box parent.
+ */
+.masthead_logo, .card {
+  box-sizing: border-box;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  -webkit-flex-direction: column;
+  -webkit-flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem; }
+  @media only screen and (min-width: 768px) {
+    .masthead_logo, .card {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem; } }
+
+/**
+ * Generate a set of grid column placeholders using a namespace
+ *
+ * %col-[namespace] for intelligent column division
+ * %col-[namespace]-[number] for a column that covers a specific number of columns (e.g. 1-12 by default)
+ * %off-[namespace]-[number] for pushing a col a specific number of columns (e.g. 1-11 by default)
+ */
+/**
+ * Build the grid in two steps, to help minimize file size
+ * Step 1, for each namespace, create the grid-base
+ * Step 2, for each namespace, wrap the col width/offset measurements in their breakpoint media query
+ */
+.masthead_logo {
+  flex-basis: 33.33333%;
+  max-width: 33.33333%;
+  -webkit-flex-basis: 33.33333%; }
+
+.card {
+  flex-basis: 100%;
+  max-width: 100%;
+  -webkit-flex-basis: 100%; }
+
+.card {
+  margin-left: 0%; }
+
+.masthead_logo {
+  margin-left: 33.33333%; }
+
+@media only screen and (min-width: 768px) {
+  .masthead_logo {
+    flex-basis: 16.66667%;
+    max-width: 16.66667%;
+    -webkit-flex-basis: 16.66667%; }
+  .card {
+    flex-basis: 41.66667%;
+    max-width: 41.66667%;
+    -webkit-flex-basis: 41.66667%; }
+  .card {
+    margin-left: 8.33333%; }
+  .masthead_logo {
+    margin-left: 41.66667%; } }
+
+@media only screen and (min-width: 1015px) {
+  .card {
+    flex-basis: 25%;
+    max-width: 25%;
+    -webkit-flex-basis: 25%; }
+  .card {
+    margin-left: 0%; } }
+
+body {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  color: #999999;
+  -webkit-font-smoothing: antialiased; }
+
+html {
+  font-size: 16px; }
+
+body {
+  margin: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  background-color: #f5f5f5; }
+
+code {
+  display: block;
+  margin: 1rem 0;
+  background: #36454f;
+  color: #ffffff;
+  padding: 2rem; }
+
+fieldset {
+  border: none;
+  margin: 0; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+main {
+  flex: 1; }
+
 h1 {
-  font-family: 'open sans', sans-serif;
   font-size: 4rem;
-  font-weight: 500;
-  text-align: center;
-  margin-top: 0.75rem;
-  margin-bottom: 1.75rem;
-  /*   color: #999999; */
-  color: #ffffff; }
-  @media screen and (max-width: 915px) {
-    h1 {
-      font-size: 2.5rem; } }
+  font-family: "Roboto", sans-serif;
+  color: #999999;
+  margin: 0;
+  font-weight: 700;
+  margin: 0.75rem 0 1.75rem 0;
+  text-align: center; }
 
 h2 {
-  font-family: 'open sans', sans-serif, regular;
   font-size: 1.5rem;
-  font-weight: 100;
+  font-family: "Roboto", sans-serif;
+  color: #999999;
+  margin: 0;
+  font-weight: 700;
   text-align: center;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  /*   color: #999999; */
-  color: #ffffff;
+  margin-top: 1.5rem 0;
   line-height: 2.75rem; }
 
 h3 {
-  font-family: 'open sans', sans-serif, regular;
   font-size: 1.25rem;
-  font-weight: 100;
-  text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
+  font-family: "Roboto", sans-serif;
   color: #999999;
-  /*  color: #ffffff;*/ }
+  margin: 0;
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem 0rem 0.4rem 0rem; }
+
+h4 {
+  font-size: 1.1rem;
+  font-family: "Roboto", sans-serif;
+  color: #999999;
+  margin: 0;
+  font-weight: 700;
+  text-align: center;
+  padding: 1.2rem 0rem 0.5rem 0rem; }
+
+h5 {
+  font-size: 1.05rem;
+  font-family: "Roboto", sans-serif;
+  color: #999999;
+  margin: 0;
+  font-weight: 700;
+  text-align: center; }
+
+h6 {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  color: #999999;
+  margin: 0;
+  font-weight: 700;
+  text-align: center; }
 
 p {
-  font-family: 'open sans', sans-serif, regular;
+  @extent %primary-font-regular;
   font-size: 1rem;
-  font-weight: 100;
-  text-align: center;
-  color: #999999;
-  /*  color: #ffffff;*/ }
+  margin: 0.65rem 0; }
 
 a {
-  color: #818080;
-  text-decoration: none; }
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #0a63f0;
+  text-decoration: none;
+  padding: 0.75rem 0rem; }
+  a:hover, a:active {
+    color: #063b8e; }
 
-a:hover {
-  color: gold; }
-
-/*--------------------*    Global Elements
-\*--------------------*/
-body {
-  margin: 0;
-  min-height: 100vh;
-  background-color: #f7f5f5; }
-
-.subtitle {
-  text-align: center;
-  margin-top: 3rem;
-  margin-bottom: 2.5rem; }
-
-.spacer {
-  height: 3rem; }
-  @media screen and (max-width: 915px) {
-    .spacer {
-      height: 0rem; } }
-
-/*--------------------*         Page
-\*--------------------*/
-/*.hero {
-  position: relative;
-  margin-left: 0px;
-  width: 100%;
-  height: 125vh;
-  background-color: #231F20;
-  overflow: hidden; 
-}
-
-.hero_img {
-  position: relative;
-  margin-left: 0px;
-  background-image: url("../OMP.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.8;
-  width: 100%;
-  height: 125vh; 
-}*/
-/* 
-.slogan_background {
-  position: absolute;
-  background-color: #f5f5f5;
-  bottom: 40%;
-  left: 20%;
-  right: 20%;
-  text-align: center;
-  opacity: 100;
-  padding: 2.55rem 2rem;
-} */
-.slogan_background {
-  position: absolute;
-  background-color: #000;
-  /*  background-color: transparent; */
-  top: 2rem;
-  left: 8%;
-  right: 8%;
-  text-align: center;
-  opacity: 100;
-  padding: 2.55rem 2rem; }
-  @media screen and (max-width: 915px) {
-    .slogan_background {
-      left: 8%;
-      right: 8%;
-      bottom: 10.1%;
-      padding: 0.75rem 0.15rem 0.75rem 0.15rem; } }
-
-.mast_head {
-  width: 12%; }
-
-.contact {
-  padding-top: 2rem;
-  border-top: 1px solid #ffffff;
-  width: 80%;
-  margin: 2rem auto; }
-
-/*--------------------*      card molecule
-\*--------------------*/
 .card {
-  float: none;
-  position: relative;
-  display: inline-block;
-  border-bottom: 0.5rem solid #e36a6b;
-  width: 31%;
   background-color: #fefefe;
   min-height: 26.5rem;
-  padding: 1.25rem 0 0.25rem;
-  width: 40%;
-  margin-bottom: 1rem;
-  height: 15rem; }
+  padding: 1.25rem 0.5rem;
+  border-bottom: 0.5rem solid #e36a6b;
+  margin-bottom: 1.25rem; }
 
 .icon {
-  display: block;
   position: relative;
   margin: 0 auto;
   max-width: 75%;
-  padding-top: 2%;
-  padding-bottom: 2%; }
-
-.sevice_description {
-  padding: 0 1.5rem; }
-  @media screen and (min-width: 1014px) {
-    .sevice_description {
-      padding: 0.5rem 1.5rem;
-      font-size: 0.9rem; } }
+  padding-bottom: 1.25rem; }
 
 .sevice_description_title {
   color: #e36a6b;
   padding: 0 1.5rem;
   text-align: center; }
+
+.sevice_description {
+  padding: 0 1.5rem; }
+
+.contact {
+  width: 80%;
+  text-align: center;
+  margin: 2rem auto;
+  border-top: 1px solid #36454f;
+  padding-top: 2rem; }

@@ -1,0 +1,27 @@
+.card {
+  @include makeColumn($size:12, $offset:0);
+  @include makeColumn(md, $size:5, $offset:1);
+  @include makeColumn(lg, $size:3, $offset:0);
+  background-color: $off-white;
+  min-height: 26.5rem;
+  padding: 1.25rem 0.5rem;
+  border-bottom: 0.5rem solid $faded-red;
+  margin-bottom: 1.25rem;
+}
+
+.icon {
+  position: relative;
+  margin: 0 auto;
+  max-width: $icon-max-width;
+  padding-bottom: 1.25rem;
+}
+
+.sevice_description_title {
+  color: $faded-red;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.sevice_description {
+  padding: 0 1.5rem;
+}

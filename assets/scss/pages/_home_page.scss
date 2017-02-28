@@ -1,0 +1,12 @@
+.masthead_logo {
+  @include makeColumn($size:4, $offset:4);
+  @include makeColumn(md, $size:2, $offset:5);
+}
+
+.contact {
+  width: 80%;
+  text-align: center;
+  margin: 2rem auto;
+  border-top: 1px solid $charcoal;
+  padding-top: 2rem;
+}

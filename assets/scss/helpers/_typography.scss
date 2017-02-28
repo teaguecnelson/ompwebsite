@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+
+// Font Sizes
+$base-font-size: 16px;
+
+// Font Families
+$primary-font: 'Open Sans', Helvetica, sans-serif;
+$secondary-font:'Roboto', sans-serif;
+
+%primary-font-regular {
+    font-family: $primary-font;
+    color: $text-color;
+    -webkit-font-smoothing: antialiased;
+}
+
+%primary-font-bold {
+    font-family: $primary-font;
+    color: $text-color;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+}
