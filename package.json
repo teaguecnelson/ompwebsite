@@ -1,0 +1,24 @@
+{
+  "name": "ompwebsite",
+  "version": "1.0.0",
+  "description": "website for omp",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path scss assets/scss/main.scss public/css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teaguecnelson/ompwebsite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teaguecnelson/ompwebsite/issues"
+  },
+  "homepage": "https://github.com/teaguecnelson/ompwebsite#readme",
+  "devDependencies": {
+    "node-sass": "^4.5.0",
+    "nodemon": "^1.11.0"
+  }
+}
