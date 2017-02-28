@@ -3,6 +3,16 @@
   @include makeColumn(md, $size:2, $offset:5);
 }
 
+.offerings {
+  @include makeRow($no-margin:true);
+  padding: 0 0.25rem;
+  max-width: 1200px;
+
+  @include breakpoint($medium) {
+    margin: 0 auto;
+  }
+}
+
 .contact {
   width: 80%;
   text-align: center;

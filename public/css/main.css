@@ -49,13 +49,32 @@
  * Spacing mixin to create uniform margin/padding
  */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto");
-.masthead_logo, .card {
+.offerings, .masthead_logo, .card {
   display: flex;
   display: -webkit-flex; }
 
 /**
  * Row wrapper class, flex box parent.
  */
+.offerings {
+  box-sizing: border-box;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem; }
+  @media only screen and (min-width: 768px) {
+    .offerings {
+      margin-left: -0.75rem;
+      margin-right: -0.75rem; } }
+  @media only screen and (min-width: 768px) {
+    .offerings {
+      padding-left: 3rem;
+      padding-right: 3rem; } }
+
 .masthead_logo, .card {
   box-sizing: border-box;
   flex-direction: column;
@@ -105,11 +124,11 @@
     max-width: 16.66667%;
     -webkit-flex-basis: 16.66667%; }
   .card {
-    flex-basis: 41.66667%;
-    max-width: 41.66667%;
-    -webkit-flex-basis: 41.66667%; }
+    flex-basis: 50%;
+    max-width: 50%;
+    -webkit-flex-basis: 50%; }
   .card {
-    margin-left: 8.33333%; }
+    margin-left: 0%; }
   .masthead_logo {
     margin-left: 41.66667%; } }
 
@@ -224,25 +243,33 @@ a {
     color: #063b8e; }
 
 .card {
-  background-color: #fefefe;
-  min-height: 26.5rem;
-  padding: 1.25rem 0.5rem;
-  border-bottom: 0.5rem solid #e36a6b;
+  padding: 1.25rem 0rem;
   margin-bottom: 1.25rem; }
+  @media only screen and (min-width: 768px) {
+    .card {
+      margin: 0rem 0rem 1.25rem 0rem; } }
 
-.icon {
+/*.icon {
   position: relative;
   margin: 0 auto;
-  max-width: 75%;
-  padding-bottom: 1.25rem; }
-
+  max-width: $icon-max-width;
+  padding-bottom: 1.25rem;
+}*/
 .sevice_description_title {
   color: #e36a6b;
   padding: 0 1.5rem;
-  text-align: center; }
+  text-align: left; }
 
 .sevice_description {
   padding: 0 1.5rem; }
+
+.offerings {
+  margin: 0;
+  padding: 0 0.25rem;
+  max-width: 1200px; }
+  @media only screen and (min-width: 768px) {
+    .offerings {
+      margin: 0 auto; } }
 
 .contact {
   width: 80%;
