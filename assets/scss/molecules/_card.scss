@@ -1,31 +1,20 @@
 .card {
   @include makeColumn($size:12, $offset:0);
   @include makeColumn(md, $size:6, $offset:0);
-  @include makeColumn(lg, $size:3, $offset:0);
-  //background-color: $off-white;
-  //min-height: 24rem;
   padding: 1.25rem 0rem;
-  //border-bottom: 0.5rem solid $faded-red;
   margin-bottom: 1.25rem;
 
   @include breakpoint($medium) {
-    margin: 0rem 0rem 1.25rem 0rem;
+    margin: 0rem 0rem 1rem 0rem;
   }
 }
 
-/*.icon {
-  position: relative;
-  margin: 0 auto;
-  max-width: $icon-max-width;
-  padding-bottom: 1.25rem;
-}*/
-
 .sevice_description_title {
-  color: $faded-red;
-  padding: 0 1.5rem;
+  color: $yellow;
+  padding: 0 1rem;
   text-align: left;
 }
 
 .sevice_description {
-  padding: 0 1.5rem;
+  padding: 0 1rem;
 }
