@@ -1,3 +1,13 @@
+// Adopted from Hugo Giraudel's Sitepoint article, 'Building a Linear-gradient Mixin in Sass'
+// https://www.sitepoint.com/building-linear-gradient-mixin-sass/
+
+@mixin linear-gradient($direction, $color-stops...) {
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}
+
+
 html {
     font-size: $base-font-size;
 }
@@ -11,7 +21,9 @@ body {
     // FIXME: Remove after adding autoprefixer
     display:  -webkit-flex;
     -webkit-flex-direction: column;
-    background-color: $body-background;
+    //background-color: $body-background;
+    //background-image: linear-gradient($gold, $gold-inverse-blue);
+    @include linear-gradient(-38deg, #DF4B6D 15%, #FDA82B 85.01%, #FDA82B 100%); // find in atoms/_linear_gradient_backgound.scss
 }
 
 code {

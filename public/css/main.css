@@ -48,7 +48,7 @@
 /**
  * Spacing mixin to create uniform margin/padding
  */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Cabin|Montserrat");
 .offerings, .masthead_logo, .card {
   display: flex;
   display: -webkit-flex; }
@@ -141,7 +141,9 @@ body {
   min-height: 100vh;
   display: -webkit-flex;
   -webkit-flex-direction: column;
-  background-color: #232932; }
+  background: #DF4B6D;
+  background: -webkit-linear-gradient(legacy-direction(-38deg), #DF4B6D 15%, #FDA82B 85.01%, #FDA82B 100%);
+  background: linear-gradient(-38deg, #DF4B6D 15%, #FDA82B 85.01%, #FDA82B 100%); }
 
 code {
   display: block;
@@ -163,7 +165,7 @@ main {
 
 h1 {
   font-size: 3.25rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #ffffff;
   margin: 0;
   font-weight: 700;
@@ -175,17 +177,16 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #ffffff;
   margin: 0;
   font-weight: 700;
-  text-align: center;
-  margin-top: 1.5rem 0;
-  line-height: 2.75rem; }
+  text-align: left;
+  padding: 0 1rem; }
 
 h3 {
   font-size: 1.25rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #ffffff;
   margin: 0;
   font-weight: 700;
@@ -194,7 +195,7 @@ h3 {
 
 h4 {
   font-size: 1.1rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #ffffff;
   margin: 0;
   font-weight: 700;
@@ -203,7 +204,7 @@ h4 {
 
 h5 {
   font-size: 1.05rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #ffffff;
   margin: 0;
   font-weight: 700;
@@ -211,7 +212,7 @@ h5 {
 
 h6 {
   font-size: 1rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #ffffff;
   margin: 0;
   font-weight: 700;
@@ -219,7 +220,7 @@ h6 {
 
 p {
   @extent %primary-font-regular;
-  font-size: 1rem;
+  font-size: 1.05rem;
   margin: 0.65rem 0; }
 
 a {
@@ -238,12 +239,12 @@ a {
     .card {
       margin: 0rem 0rem 1rem 0rem; } }
 
-.sevice_description_title {
-  color: #fdbb07;
-  padding: 0 1rem;
-  text-align: left; }
+.icon {
+  max-width: 18%;
+  padding: 0.5rem 1rem; }
 
 .sevice_description {
+  color: #232932;
   padding: 0 1rem; }
 
 .masthead_logo {
