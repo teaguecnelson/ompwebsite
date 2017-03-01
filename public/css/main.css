@@ -168,7 +168,7 @@ h1 {
   font-family: "Open Sans", sans-serif;
   color: #ffffff;
   margin: 0;
-  font-weight: 700;
+  font-weight: 500;
   margin: 0.75rem 0 1.75rem 0;
   text-align: center; }
   @media only screen and (min-width: 768px) {
@@ -176,11 +176,11 @@ h1 {
       font-size: 3.75rem; } }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-family: "Open Sans", sans-serif;
   color: #ffffff;
   margin: 0;
-  font-weight: 700;
+  font-weight: 500;
   text-align: left;
   padding: 0 1rem; }
 
@@ -189,7 +189,7 @@ h3 {
   font-family: "Open Sans", sans-serif;
   color: #ffffff;
   margin: 0;
-  font-weight: 700;
+  font-weight: 500;
   text-align: center;
   padding: 1rem 0rem 0.4rem 0rem; }
 
@@ -198,7 +198,7 @@ h4 {
   font-family: "Open Sans", sans-serif;
   color: #ffffff;
   margin: 0;
-  font-weight: 700;
+  font-weight: 500;
   text-align: center;
   padding: 1.2rem 0rem 0.5rem 0rem; }
 
@@ -207,7 +207,7 @@ h5 {
   font-family: "Open Sans", sans-serif;
   color: #ffffff;
   margin: 0;
-  font-weight: 700;
+  font-weight: 500;
   text-align: center; }
 
 h6 {
@@ -215,7 +215,7 @@ h6 {
   font-family: "Open Sans", sans-serif;
   color: #ffffff;
   margin: 0;
-  font-weight: 700;
+  font-weight: 500;
   text-align: center; }
 
 p {
@@ -244,7 +244,6 @@ a {
   padding: 0.5rem 1rem; }
 
 .sevice_description {
-  color: #232932;
   padding: 0 1rem; }
 
 .masthead_logo {
