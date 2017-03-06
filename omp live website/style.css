@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+.offerings, .masthead_logo, .company_description, .contact, .card {
+  display: flex;
+  display: -webkit-flex; }
+
+.offerings {
+  box-sizing: border-box;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem; }
+  @media only screen and (min-width: 768px) {
+    .offerings {
+      margin-left: -0.75rem;
+      margin-right: -0.75rem; } }
+  @media only screen and (min-width: 768px) {
+    .offerings {
+      padding-left: 3rem;
+      padding-right: 3rem; } }
+
+.masthead_logo, .company_description, .contact, .card {
+  box-sizing: border-box;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  -webkit-flex-direction: column;
+  -webkit-flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem; }
+  @media only screen and (min-width: 768px) {
+    .masthead_logo, .company_description, .contact, .card {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem; } }
+
+.masthead_logo {
+  flex-basis: 33.33333%;
+  max-width: 33.33333%;
+  -webkit-flex-basis: 33.33333%; }
+
+.company_description, .contact {
+  flex-basis: 83.33333%;
+  max-width: 83.33333%;
+  -webkit-flex-basis: 83.33333%; }
+
+.card {
+  flex-basis: 100%;
+  max-width: 100%;
+  -webkit-flex-basis: 100%; }
+
+.card {
+  margin-left: 0%; }
+
+.company_description, .contact {
+  margin-left: 8.33333%; }
+
+.masthead_logo {
+  margin-left: 33.33333%; }
+
+@media only screen and (min-width: 768px) {
+  .card {
+    flex-basis: 50%;
+    max-width: 50%;
+    -webkit-flex-basis: 50%; }
+  .company_description, .contact {
+    flex-basis: 66.66667%;
+    max-width: 66.66667%;
+    -webkit-flex-basis: 66.66667%; }
+  .card {
+    margin-left: 0%; }
+  .company_description, .contact {
+    margin-left: 16.66667%; } }
+
+@media only screen and (min-width: 1015px) {
+  .company_description, .contact {
+    flex-basis: 50%;
+    max-width: 50%;
+    -webkit-flex-basis: 50%; }
+  .company_description, .contact {
+    margin-left: 25%; } }
+
+a {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased; }
+
+html {
+  font-size: 16px; }
+
+body {
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;}
+
+@media only screen and (min-width: 500px) {
+    .body {
+      margin: 0 2.5rem;} }
+
+code {
+  display: block;
+  margin: 1rem 0;
+  background: #36454f;
+  color: #ffffff;
+  padding: 2rem; }
+
+fieldset {
+  border: none;
+  margin: 0; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+main {
+  flex: 1; }
+
+.hero {
+  position: absolute;
+  margin-left: 0px;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100vh;
+  background-color: #545454;
+  overflow: hidden;
+  min-height: 1510px;
+}
+
+.hero_img {
+  position: absolute;
+  margin-left: 0px;
+  left: 0px;
+  top: 0px;
+  background-repeat: no-repeat;
+  background-image: url("alisa-anton-small.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
+  width: 100%;
+  height: 100vh;
+  min-height: 1510px;
+}
+
+@media only screen and (min-width: 358px) {
+  .hero, .hero_img {
+    min-height: 1483px;
+  }}
+
+@media only screen and (min-width: 395px) {
+  .hero, .hero_img {
+    min-height: 1343px;
+  }}
+
+@media only screen and (min-width: 470px) {
+  .hero, .hero_img {
+    min-height: 1297px;
+  }}
+
+@media only screen and (min-width: 545px) {
+  .hero, .hero_img {
+    min-height: 1208px;
+  }}
+
+@media only screen and (min-width: 620px) {
+  .hero, .hero_img {
+    min-height: 1101px;
+  }}
+
+@media only screen and (min-width: 768px) {
+  .hero, .hero_img {
+    min-height: 790px;
+  }}
+
+.content-wrapper { 
+  position: relative;
+  top: 45%;
+  transform: translateY(-50%);
+}
+
+h1 {
+  font-size: 3.25rem;
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+  margin: 0;
+  font-weight: 500;
+  margin: 0.75rem 0 0.5rem 0;
+  text-align: center; }
+  @media only screen and (min-width: 768px) {
+    h1 {
+      font-size: 3.75rem; } }
+
+h2 {
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+  margin: 0;
+  font-weight: 500;
+  text-align: left;
+  padding: 0 1rem; }
+
+h3 {
+  font-size: 1.25rem;
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+  margin: 0;
+  font-weight: 500;
+  text-align: center;
+  padding: 1rem 0rem 0.4rem 0rem; }
+
+h4 {
+  font-size: 1.1rem;
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+  margin: 0;
+  font-weight: 500;
+  text-align: center;
+  padding: 1.2rem 0rem 0.5rem 0rem; }
+
+h5 {
+  font-size: 1.05rem;
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+  margin: 0;
+  font-weight: 500;
+  text-align: center; }
+
+h6 {
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+  margin: 0;
+  font-weight: 500;
+  text-align: center; }
+
+p {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  color: #ffffff;
+  font-size: 1.05rem;
+  margin: 0.65rem 0; }
+
+a {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #0a63f0;
+  text-decoration: none;
+  padding: 0.75rem 0rem; }
+  a:hover, a:active {
+    color: #063b8e; }
+
+.card {
+  padding: 1.25rem 0rem;
+  margin-bottom: 1.25rem; }
+  @media only screen and (min-width: 768px) {
+    .card {
+      margin: 0rem 0rem 1rem 0rem; } }
+
+.icon {
+  max-width: 18%;
+  padding: 0.5rem 1rem; }
+
+.sevice_description {
+  padding: 0 1rem; }
+
+.masthead_logo {
+  max-width: 5.5rem;
+  margin: 3rem auto 0.5rem auto;
+  padding: 0; }
+
+.company_description {
+  width: 90%;
+  text-align: center;
+  margin: 0 auto 1.25rem auto;
+  border-bottom: 1px solid #fefefe;
+  padding-bottom: 1.5rem; }
+
+.offerings {
+  margin: 0;
+  padding: 0 0.25rem;
+  margin: 1rem auto; }
+  @media only screen and (min-width: 768px) {
+    .offerings {
+      max-width: 1100px; } }
+
+.contact {
+  width: 90%;
+  text-align: center;
+  margin: 0.5rem auto 2rem auto;
+  border-top: 1px solid #fefefe;
+  padding-top: 2rem; }
